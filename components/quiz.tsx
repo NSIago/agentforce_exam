@@ -9,6 +9,12 @@ import { ViewAllQuestions } from "@/components/view-all-questions"
 import { ReviewModal } from "@/components/review-modal"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { Button } from "@/components/ui/button"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 import { Flag, RotateCcw, Save, BookOpen } from "lucide-react"
 
 export function Quiz() {
@@ -82,16 +88,34 @@ export function Quiz() {
           <div className="container mx-auto px-4 py-3 max-w-5xl flex items-center justify-between">
             <h1 className="text-lg font-semibold">AgentForce - Preparação</h1>
             <div className="flex items-center gap-2">
-              <Button variant="ghost" size="sm" asChild className="gap-1.5 h-8 text-xs">
-                <a
-                  href="https://drive.google.com/file/d/1r2y7O-v0ME1qh0vAW9AHPFxRuWxtOKJi/view?usp=sharing"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <BookOpen className="w-4 h-4" />
-                  <span className="hidden sm:inline">Documento de Aprendizado</span>
-                </a>
-              </Button>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" size="sm" className="gap-1.5 h-8 text-xs">
+                    <BookOpen className="w-4 h-4" />
+                    <span className="hidden sm:inline">Documento de Aprendizado</span>
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end">
+                  <DropdownMenuItem asChild>
+                    <a
+                      href="https://drive.google.com/file/d/1r2y7O-v0ME1qh0vAW9AHPFxRuWxtOKJi/view?usp=sharing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Documento 1
+                    </a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <a
+                      href="https://drive.google.com/file/d/1kgPWOR-H8-kbs6EJ3yuTeniC6XSmE9Zm/view?usp=sharing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Documento 2
+                    </a>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
               <ThemeToggle />
             </div>
           </div>
@@ -112,16 +136,34 @@ export function Quiz() {
           <div className="container mx-auto px-4 py-3 max-w-5xl flex items-center justify-between">
             <h1 className="text-lg font-semibold">AgentForce - Preparação</h1>
             <div className="flex items-center gap-2">
-              <Button variant="ghost" size="sm" asChild className="gap-1.5 h-8 text-xs">
-                <a
-                  href="https://drive.google.com/file/d/1r2y7O-v0ME1qh0vAW9AHPFxRuWxtOKJi/view?usp=sharing"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <BookOpen className="w-4 h-4" />
-                  <span className="hidden sm:inline">Documento de Aprendizado</span>
-                </a>
-              </Button>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" size="sm" className="gap-1.5 h-8 text-xs">
+                    <BookOpen className="w-4 h-4" />
+                    <span className="hidden sm:inline">Documento de Aprendizado</span>
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end">
+                  <DropdownMenuItem asChild>
+                    <a
+                      href="https://drive.google.com/file/d/1r2y7O-v0ME1qh0vAW9AHPFxRuWxtOKJi/view?usp=sharing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Documento 1
+                    </a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <a
+                      href="https://drive.google.com/file/d/1kgPWOR-H8-kbs6EJ3yuTeniC6XSmE9Zm/view?usp=sharing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Documento 2
+                    </a>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
               <ThemeToggle />
             </div>
           </div>
@@ -166,16 +208,34 @@ export function Quiz() {
                 <Save className="w-3 h-3" />
                 <span>Auto-save</span>
               </div>
-              <Button variant="ghost" size="sm" asChild className="gap-1.5 h-8 text-xs">
-                <a
-                  href="https://drive.google.com/file/d/1r2y7O-v0ME1qh0vAW9AHPFxRuWxtOKJi/view?usp=sharing"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <BookOpen className="w-4 h-4" />
-                  <span className="hidden sm:inline">Documento de Aprendizado</span>
-                </a>
-              </Button>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" size="sm" className="gap-1.5 h-8 text-xs">
+                    <BookOpen className="w-4 h-4" />
+                    <span className="hidden sm:inline">Documento de Aprendizado</span>
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end">
+                  <DropdownMenuItem asChild>
+                    <a
+                      href="https://drive.google.com/file/d/1r2y7O-v0ME1qh0vAW9AHPFxRuWxtOKJi/view?usp=sharing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Documento 1
+                    </a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <a
+                      href="https://drive.google.com/file/d/1kgPWOR-H8-kbs6EJ3yuTeniC6XSmE9Zm/view?usp=sharing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Documento 2
+                    </a>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
               <ThemeToggle />
               <Button
                 variant="outline"
