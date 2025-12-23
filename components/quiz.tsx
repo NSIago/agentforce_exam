@@ -118,6 +118,15 @@ export function Quiz() {
                       Documento 2
                     </a>
                   </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <a
+                      href="https://drive.google.com/file/d/1oJGhCvujcmVGgQBgs2CQ_mIdxmiUBDj2/view?usp=sharing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Apoio Taty - Doc1
+                    </a>
+                  </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
               <ThemeToggle />
@@ -164,6 +173,15 @@ export function Quiz() {
                       rel="noopener noreferrer"
                     >
                       Documento 2
+                    </a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <a
+                      href="https://drive.google.com/file/d/1oJGhCvujcmVGgQBgs2CQ_mIdxmiUBDj2/view?usp=sharing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Apoio Taty - Doc1
                     </a>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
@@ -236,6 +254,15 @@ export function Quiz() {
                       rel="noopener noreferrer"
                     >
                       Documento 2
+                    </a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <a
+                      href="https://drive.google.com/file/d/1oJGhCvujcmVGgQBgs2CQ_mIdxmiUBDj2/view?usp=sharing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Apoio Taty - Doc1
                     </a>
                   </DropdownMenuItem>
                 </DropdownMenuContent>

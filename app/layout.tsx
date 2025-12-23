@@ -21,6 +21,7 @@ export const viewport: Viewport = {
 }
 
 import { UpdatesNotification } from "@/components/updates-notification"
+import { AccessLogger } from "@/components/access-logger"
 
 export default function RootLayout({
   children,
@@ -32,6 +33,7 @@ export default function RootLayout({
       <body className="font-sans antialiased min-h-screen bg-background">
         {children}
         <UpdatesNotification />
+        <AccessLogger />
         <Analytics />
       </body>
     </html>
