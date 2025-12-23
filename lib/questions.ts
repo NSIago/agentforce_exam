@@ -12,14 +12,14 @@ export const questions: Question[] = [
     id: 1,
     title: "Sales Summary Requirement",
     question:
-      "Universal Containers has a requirement to provide a sales summary for its sales reps who are using Employee Agents, but they are not happy with the default answer. Which best practice should the Agentforce Specialist recommend?",
+      "Universal Containers has a requirement to provide a sales summary for its sales reps who are using Employee Agents, but they are not happy with the default answer. Which best practice should the AgentForce Specialist recommend?",
     options: [
-      { label: "A", text: "Update the standard record summary action." },
-      { label: "B", text: "Create a Record Summary custom prompt template." },
-      { label: "C", text: "Create a Knowledge Answer custom prompt template." },
+      { label: "A", text: "Create a Record Summary custom prompt template." },
+      { label: "B", text: "Create a Knowledge Answer custom prompt template." },
+      { label: "C", text: "Update the standard record summary action." },
     ],
-    correctAnswer: "B",
-    tip: "Para personalizar o resumo de registros além do padrão, a prática recomendada é criar um 'Record Summary prompt template'. Isso permite definir instruções específicas e incluir dados relevantes para atender às necessidades dos representantes de vendas.",
+    correctAnswer: "A",
+    tip: "De acordo com o Guia de Personalização de Prompt do AgentForce, a prática recomendada para modificar como dados estruturados são resumidos é criar um 'Record Summary custom prompt template'. Isso permite adaptar o resumo às necessidades específicas da empresa, em vez de substituir a ação padrão.",
   },
   {
     id: 2,
@@ -36,16 +36,16 @@ export const questions: Question[] = [
   },
   {
     id: 3,
-    title: "Custom Agent Action (Action Selected Incorrectly)",
+    title: "Custom Agent Action",
     question:
-      "An AI Specialist is creating a custom action for Agentforce. Which setting should the AI Specialist test and iterate on to ensure the action performs as expected?",
+      "An Agentforce Specialist is creating a custom action for Agentforce. Which setting should the Agentforce Specialist ensure the action performs as expected?",
     options: [
-      { label: "A", text: "Action Instructions" },
-      { label: "B", text: "Classification Description" },
-      { label: "C", text: "Action Scope" },
+      { label: "A", text: "Action Name" },
+      { label: "B", text: "Action Input" },
+      { label: "C", text: "Action Instructions" },
     ],
-    correctAnswer: "A",
-    tip: "Se o tópico (Topic) já foi selecionado corretamente, o problema está na escolha da ação dentro desse tópico. As 'Action Instructions' (Instruções da Ação) são usadas pelo mecanismo de raciocínio para entender o que a ação faz e quando deve ser usada.",
+    correctAnswer: "C",
+    tip: "As 'Action Instructions' (Instruções da Ação) são críticas para definir como o bot processa e executa a ação. Instruções refinadas garantem que o bot entenda como lidar com entradas dinâmicas e integrações, alinhando o comportamento aos requisitos de negócios.",
   },
   {
     id: 4,
@@ -80,14 +80,14 @@ export const questions: Question[] = [
     id: 6,
     title: "Scalable Testing Process",
     question:
-      "Universal Containers wants to systematically validate agent responses before deployment using a scalable testing process. Which Testing Center approach should the company implement?",
+      "Universal Containers (UC) wants to ensure the effectiveness, reliability, and trust of its agents prior to deploying them in production. UC would like to efficiently test a large and repeatable number of utterances. What should the Agentforce Specialist recommend?",
     options: [
-      { label: "A", text: "Use pilot users in production to flag incorrect responses post launch." },
-      { label: "B", text: "Manually interact with the agent in Builder until responses seem correct." },
-      { label: "C", text: "Upload a structured CSV test template and run batch test cases in Testing Center." },
+      { label: "A", text: "Leverage the Agent Large Language Model (LLM) UI and test UC's agents with different utterances prior to activating the agent." },
+      { label: "B", text: "Deploy the agent in a QA sandbox environment and review the Utterance Analysis reports to review effectiveness." },
+      { label: "C", text: "Create a CSV file with UC's test cases in Agentforce Testing Center using the testing template." },
     ],
     correctAnswer: "C",
-    tip: "Para testes escaláveis e sistemáticos, o 'Testing Center' permite o upload de arquivos CSV com casos de teste em lote. Isso é muito mais eficiente e confiável do que testes manuais ou arriscar testes em produção.",
+    tip: "O Agentforce Testing Center foi projetado especificamente para validação pré-implantação. Ele permite carregar um arquivo CSV com casos de teste para execução em lote, testando sistematicamente um grande número de interações (utterances) para garantir confiabilidade e eficácia.",
   },
   {
     id: 7,
@@ -95,12 +95,12 @@ export const questions: Question[] = [
     question:
       "Universal Containers (UC) needs to create a custom prompt template that can be called from a Lightning web component. Which prompt template type should UC create?",
     options: [
-      { label: "A", text: "Flex" },
-      { label: "B", text: "Field Generation" },
-      { label: "C", text: "Sales Email" },
+      { label: "A", text: "Field Generation" },
+      { label: "B", text: "Sales Email" },
+      { label: "C", text: "Flex" },
     ],
-    correctAnswer: "A",
-    tip: "Os templates 'Flex' são os mais versáteis e permitem criar prompts personalizados que podem ser invocados em diversos contextos, incluindo através de LWC (Lightning Web Components) via Apex ou API.",
+    correctAnswer: "C",
+    tip: "O Guia do Desenvolvedor AgentForce especifica que templates flexíveis (Flex) são o tipo correto para integrações personalizadas ou incorporadas. Eles podem ser chamados programmaticamente via Apex, Flow ou LWC, oferecendo flexibilidade para integrar o raciocínio do AgentForce em componentes de UI personalizados.",
   },
   {
     id: 8,
@@ -127,12 +127,12 @@ export const questions: Question[] = [
     question:
       "Universal Containers wants to keep retrieval accurate as product documentation changes frequently. Which approach should the company implement?",
     options: [
-      { label: "A", text: "Manually delete the stale data chunks." },
+      { label: "A", text: "Leave embedding unchanged even if content is updated." },
       { label: "B", text: "Rebuild the search index." },
-      { label: "C", text: "Leave embeddings unchanged even if content is updated." },
+      { label: "C", text: "Manually delete the stale data chunks." },
     ],
     correctAnswer: "B",
-    tip: "Quando o conteúdo fonte muda significativamente, os índices de busca vetorial podem ficar desatualizados. Reconstruir o índice (Rebuild the search index) garante que os embeddings reflitam o conteúdo mais recente da documentação.",
+    tip: "A documentação do AgentForce especifica que quando o conhecimento muda, a prática recomendada é 'Rebuild the search index' (reconstruir o índice de pesquisa). Isso regenera os embeddings e atualiza o sistema de recuperação com os dados mais recentes, garantindo precisão.",
   },
   {
     id: 10,
@@ -197,12 +197,12 @@ export const questions: Question[] = [
     question:
       "An administrator at Universal Containers has successfully deployed a new agent from a sandbox to production using a change set. The agent uses a prompt template that invokes a Salesforce flow to perform a complex calculation. In production, when users interact with the agent, it fails with an error message every time the flow is supposed to run. The flow was included in the change set and is present in production. What is the most likely cause of this issue?",
     options: [
-      { label: "A", text: "The change set did not include the dependent Apex classes for the flow." },
+      { label: "A", text: "The flow was not manually activated in the production org after the deployment." },
       { label: "B", text: "The user in production does not have permission to run the flow." },
-      { label: "C", text: "The flow was not manually activated in the production org after the deployment." },
+      { label: "C", text: "The change set did not include the dependent Apex classes for the flow." },
     ],
-    correctAnswer: "C",
-    tip: "É um erro comum em implantações Salesforce: fluxos (Flows) implantados via Change Sets frequentemente chegam em estado inativo por padrão e precisam ser ativados manualmente na organização de destino.",
+    correctAnswer: "A",
+    tip: "De acordo com o Guia de Implantação e Integração de Fluxo do AgentForce, fluxos implantados via conjuntos de alterações (change sets) chegam à produção com status 'inativo' por padrão. O administrador deve ativá-los manualmente após a implantação para que possam ser executados.",
   },
   {
     id: 14,
@@ -313,15 +313,15 @@ export const questions: Question[] = [
       },
       {
         label: "B",
-        text: "Use keyword search only, which prioritizes exact term matching but risks missing contextual meaning.",
+        text: "Use semantic search only, which captures intent but may struggle with ambiguous terms when no context is provided.",
       },
       {
         label: "C",
-        text: "Use semantic search only, which captures intent but may struggle with ambiguous terms when no context is provided.",
+        text: "Use keyword search only, which prioritizes exact term matching but risks missing contextual meaning.",
       },
     ],
     correctAnswer: "A",
-    tip: "A busca híbrida (Hybrid Search) é a melhor escolha porque aproveita o melhor dos dois mundos: palavras-chave para precisão exata (útil para termos técnicos ou nomes) e busca semântica para entender o contexto e intenção por trás do termo.",
+    tip: "A busca híbrida (Hybrid Search) combina 'keyword matching' (correspondência de palavras-chave) para precisão exata com 'semantic embeddings' (incorporações semânticas) para entender o contexto. Isso é ideal para resolver ambiguidades onde uma palavra pode ter múltiplos significados dependendo do contexto.",
   },
   {
     id: 21,
@@ -416,14 +416,14 @@ export const questions: Question[] = [
     id: 27,
     title: "Marketing Team AI Solution",
     question:
-      "Universal Containers (UC) wants to empower its marketing team with AI capabilities that help employees quickly find campaign data, generate creative content, and manage project tasks. The solution should also allow marketers to receive personalized support, surface relevant information, and complete work directly in Salesforce. Which AI solution should UC implement?",
+      "Universal Containers (UC) wants to empower its marketing team with AI capabilities that help employees quickly find campaign data, generate creative content, and manage project tasks. The solution should also allow marketers to receive personalized support, surface relevant information, and complete work directly in Salesforce. Which Al solution should UC implement?",
     options: [
-      { label: "A", text: "Employee Agent" },
+      { label: "A", text: "Sales Coach Agent" },
       { label: "B", text: "Service Agent" },
-      { label: "C", text: "Sales Coach Agent" },
+      { label: "C", text: "Employee Agent" },
     ],
-    correctAnswer: "A",
-    tip: "Para uso interno (como uma equipe de marketing), a solução correta é o 'Employee Agent'. Ele é configurado para auxiliar funcionários em tarefas produtivas, criativas e administrativas, ao contrário dos agentes voltados para clientes externos.",
+    correctAnswer: "C",
+    tip: "O 'Employee Agent' é projetado especificamente para capacitar equipes internas (como marketing, RH, vendas) simplificando tarefas, busca de informações e geração de conteúdo dentro do Salesforce. Sales Coach e Service Agent têm focos diferentes (vendas e atendimento externo, respectivamente).",
   },
   {
     id: 28,
@@ -528,15 +528,21 @@ export const questions: Question[] = [
     question:
       "Universal Containers (UC) is expanding its Agentforce for Service capabilities to include case management. For security purposes, UC wants the agent to verify a customer's identity before providing any case-related information. The verification must be deterministic-ensuring that no case details are shared unless identity verification has been successfully completed. Which approach best meets this requirement?",
     options: [
-      { label: "A", text: 'Use keywords such as "Always" and "Never" to write clear logic in Topic Instructions...' },
-      { label: "B", text: "Store the verification status in a custom variable and set a global instruction..." },
+      {
+        label: "A",
+        text: 'Use keywords such as "Always" and "Never" to write clear logic in Topic Instructions to ensure the agent understands the requirement.',
+      },
+      {
+        label: "B",
+        text: "Store the verification status in a custom variable and set a global instruction to check this variable before discussing case details.",
+      },
       {
         label: "C",
         text: 'Create a variable to store the verification status, set it as output from a "Verify Identity" action, and apply a filter so any case-related actions only run when the variable confirms verification.',
       },
     ],
     correctAnswer: "C",
-    tip: "Para controle de fluxo determinístico como segurança/verificação, usar variáveis de saída de ação e filtros condicionais é a prática recomendada. Isso garante tecnicamente que ações sensíveis não possam ser executadas sem a validação prévia.",
+    tip: "Para controle de fluxo determinístico como segurança/verificação, usar variáveis de saída de ação e filtros condicionais é a prática recomendada. Isso garante tecnicamente que ações sensíveis não possam ser executadas sem a validação prévia, muito mais seguro do que apenas instruções de texto.",
   },
   {
     id: 35,
