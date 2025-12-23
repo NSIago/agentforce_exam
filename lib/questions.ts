@@ -526,7 +526,7 @@ export const questions: Question[] = [
     id: 34,
     title: "Identity Verification Pattern",
     question:
-      "Universal Containers (UC) is expanding its Agentforce for Service capabilities... UC wants the agent to verify a customer's identity before providing any case-related information... Which approach best meets this requirement?",
+      "Universal Containers (UC) is expanding its Agentforce for Service capabilities to include case management. For security purposes, UC wants the agent to verify a customer's identity before providing any case-related information. The verification must be deterministic-ensuring that no case details are shared unless identity verification has been successfully completed. Which approach best meets this requirement?",
     options: [
       { label: "A", text: 'Use keywords such as "Always" and "Never" to write clear logic in Topic Instructions...' },
       { label: "B", text: "Store the verification status in a custom variable and set a global instruction..." },
