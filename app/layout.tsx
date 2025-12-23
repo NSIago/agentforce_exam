@@ -20,6 +20,8 @@ export const viewport: Viewport = {
   ],
 }
 
+import { UpdatesNotification } from "@/components/updates-notification"
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -29,6 +31,7 @@ export default function RootLayout({
     <html lang="pt-BR" suppressHydrationWarning>
       <body className="font-sans antialiased min-h-screen bg-background">
         {children}
+        <UpdatesNotification />
         <Analytics />
       </body>
     </html>

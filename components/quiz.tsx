@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useQuiz } from "@/hooks/use-quiz"
 import { QuestionCard } from "@/components/question-card"
 import { QuizNavigation } from "@/components/quiz-navigation"
@@ -37,6 +37,10 @@ export function Quiz() {
 
   const [showReviewModal, setShowReviewModal] = useState(false)
   const [viewingAll, setViewingAll] = useState(false)
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }, [state.currentQuestionIndex])
 
   if (!isLoaded) {
     return (
