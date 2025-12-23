@@ -25,7 +25,7 @@ export const questions: Question[] = [
     id: 2,
     title: "Trade Show Leads (Nurture 24/7)",
     question:
-      "Universal Containers (UC) recently attended a major trade show... wants to Qualify and nurture leads 24/7... Which Agentforce capability should UC implement?",
+      "Universal Containers (UC) recently attended a major trade show and received thousands of new leads from event badge scans. UC is struggling to follow up with each lead in a timely, personalized way. Leadership wants to: Qualify and nurture leads 24/7. * Provide accurate answers to prospect questions. * Automatically book meetings with qualified prospects. * Free up reps to focus on building relationships and closing deals. Which Agentforce capability should UC implement to meet these goals?",
     options: [
       { label: "A", text: "Commerce Agent" },
       { label: "B", text: "Sales Coach" },
@@ -38,7 +38,7 @@ export const questions: Question[] = [
     id: 3,
     title: "Custom Agent Action (Action Selected Incorrectly)",
     question:
-      "An Agentforce Specialist is creating a custom agent action. The topic is selected correctly, but the action is not. Which setting should the Agentforce Specialist test and iterate on...?",
+      "An AI Specialist is creating a custom action for Agentforce. Which setting should the AI Specialist test and iterate on to ensure the action performs as expected?",
     options: [
       { label: "A", text: "Action Instructions" },
       { label: "B", text: "Classification Description" },
@@ -64,7 +64,7 @@ export const questions: Question[] = [
     id: 5,
     title: "Field Generation Pre-requisite",
     question:
-      "Universal Containers (UC) is considering using a Field Generation prompt template type. What should UC check before creating the Field Generation prompt...?",
+      "Universal Containers (UC) is considering using a Field Generation prompt template type. What should UC check before creating the Field Generation prompt to ensure it is possible for the field to be enabled for generative AI?",
     options: [
       { label: "A", text: "That the org is set to API version 59 or higher" },
       {
@@ -106,7 +106,7 @@ export const questions: Question[] = [
     id: 8,
     title: "Hallucinating Weblinks",
     question:
-      "An Agentforce Specialist wants to troubleshoot an agent that is hallucinating weblinks... Which process is appropriate to find the root cause...?",
+      "An AgentForce Specialist wants to troubleshoot an agent that is hallucinating weblinks. The agent has an action that uses a prompt template, which is using a knowledge retriever, to generate the output text that the agent will use. Which process is appropriate to find the root cause of the hallucination behavior?",
     options: [
       { label: "A", text: "Examine the topic name and classification description for hallucination guardrails." },
       {
@@ -138,7 +138,7 @@ export const questions: Question[] = [
     id: 10,
     title: "Extracting Specific Data (Name, Phone)",
     question:
-      "An Agentforce Specialist needs to create a prompt template that extracts the customer's name, phone number, and case number from a block of text, and nothing else. How should the Agentforce Specialist structure the prompt...?",
+      "An Agentforce Specialist needs to create a prompt template that extracts the customer's name, phone number, and case number from a block of text, and nothing else. How should the Agentforce Specialist structure the prompt to ensure the large language model (LLM) doesn't include extra conversation or text?",
     options: [
       { label: "A", text: "Ask the LLM to extract and only output the important information in the text." },
       {
@@ -195,7 +195,7 @@ export const questions: Question[] = [
     id: 13,
     title: "Flow Error After Deployment",
     question:
-      "An administrator at Universal Containers has successfully deployed a new agent... fails with an error message every time the flow is supposed to run... What is the most likely cause of this issue?",
+      "An administrator at Universal Containers has successfully deployed a new agent from a sandbox to production using a change set. The agent uses a prompt template that invokes a Salesforce flow to perform a complex calculation. In production, when users interact with the agent, it fails with an error message every time the flow is supposed to run. The flow was included in the change set and is present in production. What is the most likely cause of this issue?",
     options: [
       { label: "A", text: "The change set did not include the dependent Apex classes for the flow." },
       { label: "B", text: "The user in production does not have permission to run the flow." },
@@ -208,7 +208,7 @@ export const questions: Question[] = [
     id: 14,
     title: "Flex Prompt Template Best Practice",
     question:
-      "An Agentforce Specialist is building a Flex prompt template. Which best practice should the Agentforce Specialist follow...?",
+      "An Agentforce Specialist is building a Flex prompt template. Which best practice should the Agentforce Specialist follow when creating the Flex prompt template?",
     options: [
       {
         label: "A",
@@ -230,7 +230,7 @@ export const questions: Question[] = [
     id: 15,
     title: "Service Agent Knowledge Issue",
     question:
-      "Universal Containers deploys a new Agentforce Service Agent... but is getting feedback that the Service Agent is not providing answers to customer questions that are found in the company's Salesforce Knowledge articles. What is the likely issue?",
+      "Universal Containers deploys a new Agentforce Service Agent into the company's website but is getting feedback that the Agentforce Service Agent is not providing answers to customer questions that are found in the company's Salesforce Knowledge articles. What is the likely issue?",
     options: [
       { label: "A", text: "The Agentforce Service Agent user is not assigned the correct Agent Type License." },
       { label: "B", text: "The Agentforce Service Agent user was not given the Allow View Knowledge permission set." },
@@ -305,7 +305,7 @@ export const questions: Question[] = [
     id: 20,
     title: "Ambiguous Terms Retrieval",
     question:
-      'Coral Cloud Resorts is implementing Agentforce retrieval. Customers sometimes type ambiguous terms (for example, "package")... Which retrieval strategy best balances precision and contextual disambiguation?',
+      "Coral Cloud Resorts is implementing Agentforce retrieval. Customers sometimes type ambiguous terms (for example, \"package\" could mean vacation package or baggage). Which retrieval strategy best balances precision and contextual disambiguation?",
     options: [
       {
         label: "A",
@@ -340,7 +340,7 @@ export const questions: Question[] = [
     id: 22,
     title: "Small Accounts (No-code strategy)",
     question:
-      "An Agentforce Specialist at Universal Containers (UC) is building with no-code tools only... wants to maximize the sales operations team's time... Which approach should the Agentforce Specialist recommend...?",
+      "An Agentforce Specialist at Universal Containers (UC) is building with no-code tools only. They have many small accounts that are only touched periodically by a specialized sales team, and UC wants to maximize the sales operations team's time. UC wants to help prep the sales team for the calls by summarizing past purchases, interests in products shown by the Contact captured via Data Cloud, and a recap of past email and phone conversations for which there are transcripts. Which approach should the Agentforce Specialist recommend to achieve this use case?",
     options: [
       { label: "A", text: "Deploy UC's own custom foundational model on this data first." },
       {
@@ -356,7 +356,7 @@ export const questions: Question[] = [
     id: 23,
     title: "Flow Data Access (Running User)",
     question:
-      "Universal Containers has a custom agent action calling a flow to retrieve the real-time status of an order... For the given flow, what should the Agentforce Specialist consider about the running user's data access?",
+      "Universal Containers has a custom Agent action calling a flow to retrieve the real-time status of an order from the order fulfillment system. For the given flow, what should the AI Specialist consider about the running user's data access?",
     options: [
       {
         label: "A",
@@ -416,7 +416,7 @@ export const questions: Question[] = [
     id: 27,
     title: "Marketing Team AI Solution",
     question:
-      "Universal Containers (UC) wants to empower its marketing team... generate creative content, manage project tasks... Which AI solution should UC implement?",
+      "Universal Containers (UC) wants to empower its marketing team with AI capabilities that help employees quickly find campaign data, generate creative content, and manage project tasks. The solution should also allow marketers to receive personalized support, surface relevant information, and complete work directly in Salesforce. Which AI solution should UC implement?",
     options: [
       { label: "A", text: "Employee Agent" },
       { label: "B", text: "Service Agent" },
@@ -461,7 +461,7 @@ export const questions: Question[] = [
     id: 30,
     title: "Deployment Metadata Component",
     question:
-      "A developer is using the Salesforce CLI to deploy agent components... Which metadata component should the developer include in their package.xml file that contains all of the topics and actions the agent will interact with?",
+      "A developer is using the Salesforce CLI to deploy agent components from a sandbox to production. They recently made a change to several topics, instructions, and actions. Which metadata component should the developer include in their package.xml file that contains all of the topics and actions an agent will interact with?",
     options: [
       { label: "A", text: "EinsteinAiPlannerBundle" },
       { label: "B", text: "genAiPlannerBundle" },
@@ -474,7 +474,7 @@ export const questions: Question[] = [
     id: 31,
     title: "Service Plan Upgrade Use Case",
     question:
-      'When a verified customer in a help center says, "I want to upgrade my service plan," an AI agent needs to complete the following asks: Verify identity... Create quote... Calculate amount... Which type of agent should an Agentforce Specialist build to support this use case?',
+      "When a verified customer in a help center says, \"I want to upgrade my service plan,\" an AI agent needs to complete the following tasks: Verify identity and entitlement. Create a new quote. Calculate a prorated upgrade amount. Escalate to an Account Executive (AE) only if the reorder exceeds USD 25,000. Which type of agent should an AgentForce Specialist build to support this use case?",
     options: [
       { label: "A", text: "Employee Agent to orchestrate internal logistics and finance" },
       {
@@ -542,7 +542,7 @@ export const questions: Question[] = [
     id: 35,
     title: "Query Oracle ERP",
     question:
-      "Universal Containers wants to allow its service agents to query the current fulfillment status... from Oracle ERP... How should an Agentforce Specialist apply the power of conversational AI to this use case?",
+      "Universal Containers wants to allow its service agents to query the current fulfillment status of an order with natural language. There is an existing autolaunched flow to query the information from Oracle ERP, which is the system of record for the order fulfillment process. How should an AI Specialist apply the power of conversational AI to this use case?",
     options: [
       { label: "A", text: "Configure the Integration Flow standard action in Agent Builder." },
       { label: "B", text: "Create a custom agent action which calls a flow." },
@@ -568,7 +568,7 @@ export const questions: Question[] = [
     id: 37,
     title: "HR Policies (Latest and Active)",
     question:
-      "Universal Containers (UC) wants to build an Agentforce Service Agent that provides the latest, active, and relevant policy and compliance information to customers. The agent must: Semantically search HR policies... Ensure responses are grounded on published knowledge... What should UC do to ensure the agent retrieves the right information?",
+      "Universal Containers (UC) wants to build an Agentforce Service Agent that provides the latest, active, and relevant policy and compliance information to customers. The agent must: Semantically search HR policies, compliance guidelines, and company procedures. Ensure responses are grounded on published Knowledge. Allow Knowledge updates to be reflected immediately without manual reconfiguration. What should UC do to ensure the agent retrieves the right information?",
     options: [
       { label: "A", text: "Enable the agent to search all internal records and past customer inquiries." },
       { label: "B", text: "Set up an Agentforce Data Library to store and index policy documents for AI retrieval." },
@@ -619,7 +619,7 @@ export const questions: Question[] = [
     id: 40,
     title: "BYOLLM Error",
     question:
-      "Cloud Kicks (CK) recently finished the development of a new prompt template that uses its own large language model (LLM). CK is deploying a prompt template... receiving an error related to the LLM used in the prompt template. What is the cause of the error?",
+      "Cloud Kicks (CK) recently finished the development of a new prompt template that uses its own large language model (LLM). CK is deploying a prompt template from a sandbox to a production org, and is receiving an error. When trying to deploy the change set, CK is getting an error related to the LLM used in the prompt template. What is the cause of the error?",
     options: [
       { label: "A", text: "The prompt does not specify that it is a custom LLM." },
       { label: "B", text: "BYOLLM is not yet supported for in prompt templates in production." },
@@ -645,7 +645,7 @@ export const questions: Question[] = [
     id: 42,
     title: "Detailed Product Description Prompt",
     question:
-      "Universal Containers (UC) needs to create a prompt template that provides a detailed product description based on the latest product data... Which prompt template type should UC use?",
+      "Universal Containers (UC) needs to create a prompt template that provides a detailed product description based on the latest product data. The description will be used in marketing materials to ensure consistency and accuracy. Which prompt template type should UC use?",
     options: [
       { label: "A", text: "Sales Email" },
       { label: "B", text: "Field Generation" },
@@ -723,7 +723,7 @@ export const questions: Question[] = [
     id: 48,
     title: "Detailed Interaction Data (Reasoning)",
     question:
-      "Universal Containers (UC) needs to capture and store detailed interaction data for all agents. Which feature should help UC get a full view of the agent's behavior... including reasoning engine executions...?",
+      "Universal Containers (UC) needs to capture and store detailed interaction data for all agents. Which feature should help UC get a full view of the agent's behavior from start to finish, including reasoning engine executions, actions, prompt and gateway inputs/outputs, error messages, and final responses?",
     options: [
       { label: "A", text: "Agentforce Session Tracing" },
       { label: "B", text: "Utterance Analysis" },
@@ -777,7 +777,7 @@ export const questions: Question[] = [
     id: 51,
     title: "Digital Experience Site Integration",
     question:
-      "Universal Containers (UC) wants to deploy an Agentforce Service Agent to support customers via a web experience... What is a required step to connect the agent to the Digital Experience site using Messaging for In-App and Web?",
+      "Universal Containers (UC) wants to deploy an Agentforce Service Agent to support customers via a web experience. UC uses a Digital Experience site and wants to enable messaging for logged-in users. The customer needs to pass the membership number to the agent for which a pre-chat variable is available. What is a required step to connect the agent to the Digital Experience site using Messaging for In-App and Web?",
     options: [
       {
         label: "A",
@@ -796,7 +796,7 @@ export const questions: Question[] = [
     id: 52,
     title: "Testing Center Environment",
     question:
-      "Universal Containers (UC) is preparing to use the Agentforce Testing Center to ensure the reliability of a new agent. UC has a CSV file with test cases... Which best practice should the company follow to avoid modifying CRM data while running tests in the Testing Center?",
+      "Universal Containers (UC) is preparing to use the Agentforce Testing Center to ensure the reliability of a new agent. UC has a CSV file with test cases and is reviewing the documentation to understand best practices and limitations. Which best practice should the company follow to avoid modifying CRM data while running tests in the Testing Center?",
     options: [
       { label: "A", text: "Use the Testing Center only in the sandbox environment." },
       { label: "B", text: "Limit the number of test cases to 50 per test to minimize data changes." },
@@ -828,7 +828,7 @@ export const questions: Question[] = [
     id: 54,
     title: "Booking Sequence Execution",
     question:
-      "Coral Cloud Resorts needs to ensure its booking agent executes actions in a specific sequence... Which approach should an Agentforce Specialist implement?",
+      "Coral Cloud Resorts needs to ensure its booking agent executes actions in a specific sequence: first retrieve available sessions, then verify customer eligibility, and finally create the booking. The current implementation allows the large language model (LLM) to execute these actions in any order, causing booking failures. Which approach should an Agentforce Specialist implement?",
     options: [
       {
         label: "A",
@@ -885,7 +885,7 @@ export const questions: Question[] = [
     id: 57,
     title: "External Service Data in Prompt",
     question:
-      "Universal Containers (UC) has registered an external service and created a template-triggered prompt flow that invokes the external service to fetch data from a REST API. UC now needs to make the response data... usable inside a prompt template as a merge field... How should UC meet this requirement?",
+      "Universal Containers (UC) has registered an external service and created a template-triggered prompt flow that invokes the external service to fetch data from a REST API. UC now needs to make the response data from the external service usable inside a prompt template as a merge field when the template runs. How should UC meet this requirement?",
     options: [
       { label: "A", text: "Use External Service Record merge fields." },
       { label: "B", text: "Convert the JSON to an XML merge field." },
@@ -911,7 +911,7 @@ export const questions: Question[] = [
     id: 59,
     title: "Sales Email Template Permission",
     question:
-      "An Agentforce Specialist needs to enable the use of Sales Email prompt templates for the sales team... According to best practices, which steps should the Agentforce Specialist take to ensure the sales team can use these templates?",
+      "An Agentforce Specialist needs to enable the use of Sales Email prompt templates for the sales team. The Agentforce Specialist has already created the templates in Prompt Builder. According to best practices, which steps should the Agentforce Specialist take to ensure the sales team can use these templates?",
     options: [
       { label: "A", text: "Assign the Prompt Template Manager permission set and enable Sales Emails in Setup." },
       { label: "B", text: "Assign the Data Cloud Admin permission set and enable Sales Emails in Setup." },
@@ -1030,7 +1030,7 @@ export const questions: Question[] = [
     id: 67,
     title: "Email Placeholders",
     question:
-      "Universal Containers tests out a new Einstein Generative AI feature... draft email contains placeholders... What is the most likely explanation?",
+      "Universal Containers tests out a new Einstein Generative AI feature for its sales team to create personalized and contextualized emails for its customers. Sometimes, users find that the draft email contains placeholders for attributes that could have been derived from the recipient's contact record. What is the most likely explanation for why the draft email shows these placeholders?",
     options: [
       { label: "A", text: "The user does not have Einstein Sales Emails permission assigned." },
       { label: "B", text: "The user does not have permission to access the fields." },
@@ -1043,7 +1043,7 @@ export const questions: Question[] = [
     id: 68,
     title: "PDF Ingestion Missing Field",
     question:
-      "Universal Containers (UC) configured a new PDF file ingestion in Data Cloud... and notices a required field is missing. How should UC resolve this?",
+      "Universal Containers (UC) configured a new PDF file ingestion in Data Cloud with all the required fields, and also created the mapping and the search index. UC is now setting up the retriever and notices a required field is missing. How should UC resolve this?",
     options: [
       { label: "A", text: "Update the search index to include the desired field." },
       { label: "B", text: "Modify the retriever's configuration to include the desired field." },
@@ -1081,7 +1081,7 @@ export const questions: Question[] = [
     id: 71,
     title: "Token Limit Errors",
     question:
-      "Universal Containers built a Field Generation prompt template... users are reporting random failures with token limit errors. What is the cause...?",
+      "Universal Containers built a Field Generation prompt template that worked for many records, but users are reporting random failures with token limit errors. What is the cause of the random nature of this error?",
     options: [
       { label: "A", text: "The template type needs to be switched to Flex..." },
       {
