@@ -1099,4 +1099,364 @@ export const questions: Question[] = [
     correctAnswer: "B",
     tip: "O erro de limite de tokens geralmente é variável porque depende dos dados. Se um registro específico tiver muito texto nos campos relacionados usados para 'grounding', ele pode estourar o limite de entrada do modelo, enquanto outros registros menores funcionam bem.",
   },
+  {
+    id: 72,
+    title: "Latest Opportunities Summary",
+    question: "An Agentforce Specialist needs to create a prompt template to fill a custom field named Latest Opportunities Summary on the Account object with information from the three most recently opened opportunities. How should the Agentforce Specialist gather the necessary data for the prompt template?",
+    options: [
+      { label: "A", text: "Select the latest Opportunities related list as a merge field." },
+      { label: "B", text: "Create a flow to retrieve the opportunity information." },
+      { label: "C", text: "Select the Account Opportunity object as a resource when creating the prompt template." },
+    ],
+    correctAnswer: "B",
+    tip: "A maneira mais robusta e flexível de obter dados específicos (como 'as 3 oportunidades mais recentes') para um Prompt Template é usar um Flow. Flows permitem lógica de consulta, filtro e ordenação que merge fields simples não suportam."
+  },
+  {
+    id: 73,
+    title: "Standard Action for Filtering",
+    question: "Based on the user utterance, 'Show me all the customers in New York', which standard Agent action will the planner service use?",
+    options: [
+      { label: "A", text: "Query Records" },
+      { label: "B", text: "Fetch Records" },
+      { label: "C", text: "Select Records" },
+    ],
+    correctAnswer: "A",
+    tip: "A ação padrão 'Query Records' é projetada para interpretar solicitações de linguagem natural que envolvem filtro de dados (como 'em Nova York') e executar a consulta correspondente no banco de dados."
+  },
+  {
+    id: 74,
+    title: "Einstein Conversation Insights",
+    question: "Universal Containers' sales team engages in numerous video sales calls with prospects across the nation. Sales management wants an easy way to understand key information such as deal terms or customer sentiments. Which Einstein Generative AI feature should An Agentforce recommend for this request?",
+    options: [
+      { label: "A", text: "Einstein Call Summaries" },
+      { label: "B", text: "Einstein Conversation Insights" },
+      { label: "C", text: "Einstein Video KPI" },
+    ],
+    correctAnswer: "B",
+    tip: "Einstein Conversation Insights é a ferramenta que analisa chamadas de voz e vídeo para extrair momentos-chave, sentimento, menções a concorrentes e termos de negociação, oferecendo uma visão analítica sem precisar assistir a tudo."
+  },
+  {
+    id: 75,
+    title: "Personalized Marketing Content",
+    question: "The marketing team at Universal Containers is looking for a way personalize emails based on customer behavior, preferences, and purchase history. Why should the team use Agent as the solution?",
+    options: [
+      { label: "A", text: "To generate relevant content when engaging with each customer" },
+      { label: "B", text: "To analyze past campaign performance" },
+      { label: "C", text: "To send automated emails to all customers" },
+    ],
+    correctAnswer: "A",
+    tip: "O uso de Agentes (Agentforce) em marketing visa principalmente a geração de conteúdo hiper-personalizado em tempo real ('generate relevant content'), utilizando o contexto rico do cliente para criar engajamento individualizado."
+  },
+  {
+    id: 76,
+    title: "Data Library Indexing location",
+    question: "For an Agentforce Data Library that contains uploaded files, what occurs once it is created and configured?",
+    options: [
+      { label: "A", text: "Indexes the uploaded files in a location specified by the user" },
+      { label: "B", text: "Indexes the uploaded files into Data Cloud" },
+      { label: "C", text: "Indexes the uploaded files in Salesforce File Storage" },
+    ],
+    correctAnswer: "B",
+    tip: "Quando você usa uma Data Library no Agentforce, os arquivos enviados são ingeridos e indexados diretamente no Vetor Database do Data Cloud, tornando-os prontos para busca semântica e RAG."
+  },
+  {
+    id: 77,
+    title: "Agentforce User Interface",
+    question: "Which use case is best supported by Salesforce Agent's capabilities?",
+    options: [
+      { label: "A", text: "Bring together a conversational interface for interacting with AI for all Salesforce users, such as developers and ecommerce retailers." },
+      { label: "B", text: "Enable Salesforce admin users to create and train custom large language models (LLMs) using CRM data." },
+      { label: "C", text: "Enable data scientists to train predictive AI models with historical CRM data using built-in machine learning capabilities" },
+    ],
+    correctAnswer: "A",
+    tip: "O Salesforce Agent (Agentforce) foca em fornecer uma interface conversacional unificada e inteligente para assistir diversos tipos de usuários em suas tarefas diárias."
+  },
+  {
+    id: 78,
+    title: "Deterministic Triage Logic",
+    question: "Coral Cloud Resorts (CCR) uses Agentforce to assist customers with booking and service issues. CCR wants to implement a triage process that: * High severity requests must be escalated to a human service rep. * Lower severity requests should result in creating a support case for the guest. The requirement is to achieve the highest reliability and determinism in the response from the agent. Which approach should an Agentforce Specialist recommend?",
+    options: [
+      { label: "A", text: "Write the triage and routing logic in Topic Instructions using an IF, THEN, ELSE pattern." },
+      { label: "B", text: "Use absolute keywords like \"Always\" and \"Never\" in Topic Instructions to enforce logic." },
+      { label: "C", text: "Create a custom variable severityLevel populated by a Triage action. Add filters so the \"Escalate\" action only runs when severityLevel = 'High'." },
+    ],
+    correctAnswer: "C",
+    tip: "Para lógica de triagem crítica e determinística, não confie apenas no prompt. Use variáveis de fluxo e filtros de ação. Isso garante que a escalação para humano SÓ aconteça quando a variável 'severityLevel' for explicitamente 'High'."
+  },
+  {
+    id: 79,
+    title: "Fine-tune for Company Context",
+    question: "Universal Containers (UC) wants to improve the productivity of its sales team with generative AI technology. However, UC is concerned that public AI virtual assistants lack adequate company data to general useful responses. Which solution should UC consider?",
+    options: [
+      { label: "A", text: "fine-tune the Einstein AI model with CBM data." },
+      { label: "B", text: "Build Al model with Einstein discovery and deploy to sales users." },
+      { label: "C", text: "Enable Agentforce and deploy to sales users." },
+    ],
+    correctAnswer: "A",
+    tip: "Para alinhar as respostas da IA ao contexto específico da empresa e superar a limitação de dados genéricos de modelos públicos, a solução é o 'Fine-tuning' ou grounding com dados do CRM."
+  },
+  {
+    id: 80,
+    title: "Messaging Session Object",
+    question: "Which object stores the conversation transcript between the customer and the agent?",
+    options: [
+      { label: "A", text: "Messaging End User" },
+      { label: "B", text: "Messaging Session" },
+      { label: "C", text: "Case" },
+    ],
+    correctAnswer: "B",
+    tip: "O objeto 'Messaging Session' é onde o Salesforce armazena todo o histórico da conversa (transcrição) entre o cliente e o agente (ou bot), sendo fundamental para auditoria e contexto."
+  },
+  {
+    id: 81,
+    title: "Agent Analytics",
+    question: "Universal Containers recently launched a pilot program to integrate conversational AI into its CRM business operations with Agentforce Agents. How should the Agentforce Specialist monitor Agents’ usability and the assignment of actions?",
+    options: [
+      { label: "A", text: "Run a report on the Platform Debug Logs." },
+      { label: "B", text: "Query the Agent log data using the Metadata API." },
+      { label: "C", text: "Run Agent Analytics." },
+    ],
+    correctAnswer: "C",
+    tip: "'Agent Analytics' é a ferramenta analítica dedicada para visualizar métricas de desempenho do agente, uso de tópicos e satisfação do usuário, oferecendo dashboards prontos para monitoramento."
+  },
+  {
+    id: 82,
+    title: "Einstein Trust Layer Data Masking",
+    question: "Universal Containers’ current AI data masking rules do not align with organizational privacy and security policies and requirements. What should An Agentforce recommend to resolve the issue?",
+    options: [
+      { label: "A", text: "Enable data masking for sandbox refreshes." },
+      { label: "B", text: "Configure data masking in the Einstein Trust Layer setup." },
+      { label: "C", text: "Add new data masking rules in LLM setup." },
+    ],
+    correctAnswer: "B",
+    tip: "A configuração de mascaramento de dados para IA generativa é gerenciada centralmente no 'Einstein Trust Layer'. É lá que você define quais padrões de dados devem ser ocultados antes de enviar o prompt ao LLM."
+  },
+  {
+    id: 83,
+    title: "Service AI Grounding",
+    question: "Universal Containers (UC) has a mature Salesforce org with a lot of data in cases and Knowledge articles. UC is concerned that there are many legacy fields, with data that might not be applicable for Einstein AI to draft accurate email responses. Which solution should UC use to ensure Einstein AI can draft responses from a defined data source?",
+    options: [
+      { label: "A", text: "Service AI Grounding" },
+      { label: "B", text: "Work Summaries" },
+      { label: "C", text: "Service Replies" },
+    ],
+    correctAnswer: "A",
+    tip: "'Service AI Grounding' permite definir explicitamente quais objetos e campos são usados como fonte de verdade para as respostas da IA, evitando que dados legados ou irrelevantes contaminem o conteúdo gerado."
+  },
+  {
+    id: 84,
+    title: "Recipient Account Merge Field",
+    question: "In addition to Recipient and Sender, which object should An Agentforce utilize for inserting merge fields into a Sales email template prompt?",
+    options: [
+      { label: "A", text: "Recipient Opportunities" },
+      { label: "B", text: "Recipient Account" },
+      { label: "C", text: "User Organization" },
+    ],
+    correctAnswer: "B",
+    tip: "Para emails de vendas, além dos dados do contato (Recipient) e do remetente, o contexto mais relevante geralmente vem do 'Recipient Account' (Conta do Destinatário), fornecendo dados da empresa alvo."
+  },
+  {
+    id: 85,
+    title: "Field Generation for Dynamic Forms",
+    question: "Leadership needs to populate a dynamic form field with a summary or description created by a large language model (LLM) to facilitate more productive conversations with customers. Leadership also wants to keep a human in the loop to be considered in their AI strategy. Which prompt template type should the Agentforce Specialist recommend?",
+    options: [
+      { label: "A", text: "Field Generation" },
+      { label: "B", text: "Sales Email" },
+      { label: "C", text: "Record Summary" },
+    ],
+    correctAnswer: "A",
+    tip: "Quando o objetivo é preencher um campo de formulário com conteúdo gerado por IA (como um resumo dinâmico para o usuário revisar), o tipo de template correto é 'Field Generation' (Geração de Campo)."
+  },
+  {
+    id: 86,
+    title: "Deployable Configurations",
+    question: "Universal Containers has a strict change management process that requires all possible configuration to be completed in a sandbox which will be deployed to production. The Agentforce Specialist is tasked with setting up Work Summaries for Enhanced Messaging. Einstein Generative AI is already enabled in production... Which other configuration steps should the Agentforce Specialist take in the sandbox that can be deployed to the production org?",
+    options: [
+      { label: "A", text: "create custom fields... create a Quick Action... add the Wrap Up component... and create Permission Set Assignments..." },
+      { label: "B", text: "From the Epstein setup menu, select Turn on Einstein..." },
+      { label: "C", text: "Create custom fields to store Issue, Resolution, and Summary; create a Quick Action that updates these fields: and add the Wrap up component to the Messaging session record page layout." },
+    ],
+    correctAnswer: "C",
+    tip: "Metadados como Campos Customizados, Quick Actions e Layouts de Página são totalmente implantáveis (deployable). Atribuições de Permission Set (Assignments) a usuários específicos são dados, não metadados, e não se implantam da mesma forma."
+  },
+  {
+    id: 87,
+    title: "SDR Agent Channel",
+    question: "Universal Containers (UC) would like to implement the Sales Development Representative (SDR) Agent. Which channel consideration should UC be aware of while implementing it?",
+    options: [
+      { label: "A", text: "SDR Agent must be deployed in the Messaging channel." },
+      { label: "B", text: "SDR Agent only works in the Email channel." },
+      { label: "C", text: "SDR Agent must also be deployed on the company website." },
+    ],
+    correctAnswer: "A",
+    tip: "O agente SDR (Sales Development Representative) é otimizado para canais de conversação em tempo real, portanto, sua implantação principal e recomendada é através do canal 'Messaging'."
+  },
+  {
+    id: 88,
+    title: "Data Grounding with ERP",
+    question: "Universal Containers wants to incorporate the current order fulfillment status into a prompt for a large language model (LLM). The order status is stored in the external enterprise resource planning (ERP) system. Which data grounding technique should the Agentforce Specialist recommend?",
+    options: [
+      { label: "A", text: "External Object Record Merge Fields" },
+      { label: "B", text: "External Services Merge Fields" },
+      { label: "C", text: "Apex Merge Fields" },
+    ],
+    correctAnswer: "A",
+    tip: "Usar 'External Objects' (via Salesforce Connect) permite tratar dados externos como registros do Salesforce. Isso facilita o uso desses dados em prompts através de merge fields padrão de registro."
+  },
+  {
+    id: 89,
+    title: "Topic Selection Logic",
+    question: "Universal Containers has set up a Service Agent to allow customers to look up their order status. The topic setup includes Name, Classification Description, and Scope. Which information will be used by the Agentforce reasoning engine to choose this topic?",
+    options: [
+      { label: "A", text: "Topic Name and Classification Description" },
+      { label: "B", text: "Topic Name and Scope" },
+      { label: "C", text: "Classification Description and Scope" },
+    ],
+    correctAnswer: "C",
+    tip: "O Reasoning Engine utiliza a 'Classification Description' e o 'Scope' para a tomada de decisão semântica sobre qual tópico ativar. O nome em si é mais um identificador administrativo."
+  },
+  {
+    id: 90,
+    title: "Agent Fallback Behavior",
+    question: "How does an Agent respond when it can’t understand the request or find any requested information?",
+    options: [
+      { label: "A", text: "With a preconfigured message, based on the action type." },
+      { label: "B", text: "With a general message asking the user to rephrase the request." },
+      { label: "C", text: "With a generated error message." },
+    ],
+    correctAnswer: "B",
+    tip: "O comportamento padrão para falta de entendimento é pedir clarificação ao usuário ('With a general message asking the user to rephrase'), permitindo que o usuário tente novamente com outras palavras."
+  },
+  {
+    id: 91,
+    title: "Create Close Plan",
+    question: "Universal Containers wants to utilize Agentforce for Sales to help sales reps reach their sales quotas by providing AI-generated plans containing guidance and steps for closing deals. Which feature meets this requirement?",
+    options: [
+      { label: "A", text: "Create Account Plan" },
+      { label: "B", text: "Find Similar Deals" },
+      { label: "C", text: "Create Close Plan" },
+    ],
+    correctAnswer: "C",
+    tip: "O recurso 'Create Close Plan' é específico do Agentforce for Sales para gerar planos táticos de fechamento de oportunidades."
+  },
+  {
+    id: 92,
+    title: "Assign Actions to Topic",
+    question: "An Agentforce is tasked to optimize a business process flow by assigning actions to agents within the Salesforce Agentforce Platform. What is the correct method for the Agentforce Specialist to assign actions to an Agent?",
+    options: [
+      { label: "A", text: "Assign the action to a Topic First in Agent Builder." },
+      { label: "B", text: "Assign the action to a Topic first on the Agent Actions detail page." },
+      { label: "C", text: "Assign the action to a Topic first on Action Builder." },
+    ],
+    correctAnswer: "A",
+    tip: "Ações são organizadas dentro de Tópicos. Para disponibilizar uma ação para um agente, você deve adicioná-la a um dos Tópicos desse agente no Agent Builder."
+  },
+  {
+    id: 93,
+    title: "SMS Routing Channel",
+    question: "Universal Containers would like to route SMS text messages to a service rep from an Agentforce Service Agent. Which Service Channel should the company use in the flow to ensure it’s routed properly?",
+    options: [
+      { label: "A", text: "Messaging" },
+      { label: "B", text: "Route Work Action" },
+      { label: "C", text: "Live Agent" },
+    ],
+    correctAnswer: "A",
+    tip: "O canal 'Messaging' é o correto para rotear interações de SMS e mensagens modernas (MIAW) via Omni-Channel Flow."
+  },
+  {
+    id: 94,
+    title: "Data Source Immutability",
+    question: "Once a data source is chosen for an Agentforce Data Library, what is true about changing that data source later?",
+    options: [
+      { label: "A", text: "The data source can be changed through the Data Cloud settings." },
+      { label: "B", text: "The Data Retriever can be reconfigured to use a different data source." },
+      { label: "C", text: "The data source cannot be changed after it is selected." },
+    ],
+    correctAnswer: "C",
+    tip: "Uma vez configurada a Data Library, a fonte de dados (Data Source) não pode ser alterada. Isso se deve à integridade dos índices vetoriais criados a partir dessa fonte."
+  },
+  {
+    id: 95,
+    title: "Related List Merge Fields Limits",
+    question: "An Agentforce wants to use the related lists from an account in a custom prompt template. What should the Agentforce Specialist consider when configuring the prompt template?",
+    options: [
+      { label: "A", text: "The text encoding (for example, UTF-8, ASCII) option" },
+      { label: "B", text: "The maximum number of related list merge fields" },
+      { label: "C", text: "The choice between XML and JSON rendering formats for the list" },
+    ],
+    correctAnswer: "B",
+    tip: "Há limites no número de campos de mesclagem de listas relacionadas que podem ser usados para garantir que o prompt gerado não exceda os limites de tamanho e complexidade suportados."
+  },
+  {
+    id: 96,
+    title: "Action Instructions Best Practice",
+    question: "An Agentforce Specialist wants to ensure their custom agent action performs as expected in conversations. What should the Agentforce Specialist focus on when creating action instructions?",
+    options: [
+      { label: "A", text: "Write concise agent action instructions and test in Agentforce Builder." },
+      { label: "B", text: "Ensure the agent action label matches the utterance’s intent." },
+      { label: "C", text: "Include comprehensive detailed descriptions and perform smoke testing." },
+    ],
+    correctAnswer: "A",
+    tip: "Instruções concisas e testes práticos no Builder são a chave para garantir que o agente entenda e execute a ação corretamente."
+  },
+  {
+    id: 97,
+    title: "Managing Copilot Actions",
+    question: "Where should the Agentforce Specialist go to add/update actions assigned to a copilot?",
+    options: [
+      { label: "A", text: "Copilot Actions page, the record page for the copilot action, or the Copilot Action Library tab" },
+      { label: "B", text: "Copilot Actions page or Global Actions" },
+      { label: "C", text: "Copilot Detail page, Global Actions, or the record page for the copilot action" },
+    ],
+    correctAnswer: "A",
+    tip: "Esses são os locais centrais na UI do Salesforce onde você pode gerenciar, atribuir e configurar as ações disponíveis para o seu Copilot."
+  },
+  {
+    id: 98,
+    title: "Consistent Testing Logic",
+    question: "Coral Cloud Resorts needs consistent pass/fail logic for agent testing. Which Testing Center capability provides that?",
+    options: [
+      { label: "A", text: "Use customer rating as a proxy for correctness." },
+      { label: "B", text: "Run a script on event logs to identify the failed utterances." },
+      { label: "C", text: "Use structured batch testing with validation per test utterance," },
+    ],
+    correctAnswer: "C",
+    tip: "A 'Structured Batch Testing' permite definir critérios claros de sucesso (o que é 'Pass' e o que é 'Fail') para cada utterance de teste, garantindo consistência na avaliação."
+  },
+  {
+    id: 99,
+    title: "Refining Action Instructions",
+    question: "What is best practice when refining Agent custom action instructions?",
+    options: [
+      { label: "A", text: "Provide examples of user messages that are expected to trigger the action." },
+      { label: "B", text: "Use consistent introductory phrases and verbs across multiple action instructions." },
+      { label: "C", text: "Specify the persona who will request the action." },
+    ],
+    correctAnswer: "A",
+    tip: "Dar exemplos ('utterance samples') ajuda muito o modelo a entender a variedade de formas que um usuário pode pedir aquela ação, melhorando a precisão do acionamento."
+  },
+  {
+    id: 100,
+    title: "Model Hyperparameters",
+    question: "In Model Playground, which hyperparameters of an existing Salesforce-enabled foundational model can An Agentforce change?",
+    options: [
+      { label: "A", text: "Temperature, Frequency Penalty, Presence Penalty" },
+      { label: "B", text: "Temperature, Top-k sampling, Presence Penalty" },
+      { label: "C", text: "Temperature, Frequency Penalty, Output Tokens" },
+    ],
+    correctAnswer: "A",
+    tip: "Temperature, Frequency Penalty e Presence Penalty são os três principais controles disponíveis para ajustar a criatividade e repetição do modelo no Salesforce Model Playground."
+  },
+  {
+    id: 101,
+    title: "Verify Data Masking",
+    question: "Universal Container's internal auditing team asks An Agentforce to verify that address information is properly masked in the prompt being generated. How should the Agentforce Specialist verify the privacy of the masked data in the Einstein Trust Layer?",
+    options: [
+      { label: "A", text: "Enable data encryption on the address field" },
+      { label: "B", text: "Review the platform event logs" },
+      { label: "C", text: "Inspect the AI audit trail" },
+    ],
+    correctAnswer: "C",
+    tip: "A 'AI Audit Trail' permite visualizar exatamente o que aconteceu no Trust Layer, incluindo como e onde o mascaramento de dados sensíveis foi aplicado nos logs da interação."
+  }
 ]
