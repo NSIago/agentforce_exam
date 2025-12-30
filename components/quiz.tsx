@@ -233,10 +233,7 @@ export function Quiz() {
               </p>
             </div>
             <div className="flex items-center gap-2">
-              <div className="hidden sm:flex items-center gap-1 text-xs text-muted-foreground px-2 py-1 rounded-md bg-secondary/50">
-                <Save className="w-3 h-3" />
-                <span>Auto-save</span>
-              </div>
+
               <div className="flex items-center space-x-2">
                 <Switch
                   id="random-mode"
