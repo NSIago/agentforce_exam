@@ -9,7 +9,7 @@ export function UpdatesNotification() {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
-    const hasSeenUpdates = localStorage.getItem("seen_updates_v1")
+    const hasSeenUpdates = localStorage.getItem("seen_updates_v2")
     if (!hasSeenUpdates) {
       // Add a small delay for better UX
       const timer = setTimeout(() => {
@@ -21,7 +21,7 @@ export function UpdatesNotification() {
 
   const handleDismiss = () => {
     setIsVisible(false)
-    localStorage.setItem("seen_updates_v1", "true")
+    localStorage.setItem("seen_updates_v2", "true")
   }
 
   if (!isVisible) return null
@@ -38,11 +38,11 @@ export function UpdatesNotification() {
           <div className="flex-1 space-y-1 pt-1">
             <h4 className="text-sm font-semibold leading-none tracking-tight">Hey C3Ceiros! Novidades na Área!</h4>
             <p className="text-xs text-muted-foreground leading-relaxed">
-              <p>🟢 O sistema de navegação foi melhorado</p>
-              <p>🟢 Novas questões foram adicionadas</p>
-              <p>🟢 Novos documentos de estudo estão disponíveis na aba "Documento de Aprendizado"</p>
+              <p>🟢 Perguntas aleatórias! (Ative no topo)</p>
+              <p>🟢 Respostas (A, B, C) também são misturadas</p>
+              <p>🟢 O botão "Reiniciar" agora gera uma nova ordem</p>
             </p>
-            <p className="text-xs leading-none tracking-tight">Update: 23/12/2025</p>
+            <p className="text-xs leading-none tracking-tight">Update: 29/12/2025</p>
           </div>
 
           <Button

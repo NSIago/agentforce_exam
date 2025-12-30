@@ -9,6 +9,8 @@ import { ViewAllQuestions } from "@/components/view-all-questions"
 import { ReviewModal } from "@/components/review-modal"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { Button } from "@/components/ui/button"
+import { Switch } from "@/components/ui/switch"
+import { Label } from "@/components/ui/label"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -29,10 +31,12 @@ export function Quiz() {
     goToNext,
     goToPrevious,
     goToQuestion,
+    goToQuestionById,
     getUnansweredQuestions,
     finishQuiz,
     resetQuiz,
     calculateScore,
+    toggleRandomization,
   } = useQuiz()
 
   const [showReviewModal, setShowReviewModal] = useState(false)
@@ -63,8 +67,8 @@ export function Quiz() {
     setShowReviewModal(false)
     const unanswered = getUnansweredQuestions()
     if (unanswered.length > 0) {
-      const firstUnansweredIndex = questions.findIndex((q) => q.id === unanswered[0])
-      goToQuestion(firstUnansweredIndex)
+      // Use the new goToQuestionById to ensure we land on the correct question regardless of order
+      goToQuestionById(unanswered[0])
     }
   }
 
@@ -141,6 +145,9 @@ export function Quiz() {
     )
   }
 
+
+  const orderedQuestions = state.order.map((id) => questions.find((q) => q.id === id)!)
+
   if (state.showResults) {
     const score = calculateScore()
     return (
@@ -200,7 +207,7 @@ export function Quiz() {
           />
           <div className="mt-8">
             <QuizNavigation
-              questions={questions}
+              questions={orderedQuestions}
               currentIndex={state.currentQuestionIndex}
               answers={state.answers}
               confirmedAnswers={state.confirmedAnswers}
@@ -229,6 +236,14 @@ export function Quiz() {
               <div className="hidden sm:flex items-center gap-1 text-xs text-muted-foreground px-2 py-1 rounded-md bg-secondary/50">
                 <Save className="w-3 h-3" />
                 <span>Auto-save</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Switch
+                  id="random-mode"
+                  checked={state.isRandomized}
+                  onCheckedChange={toggleRandomization}
+                />
+                <Label htmlFor="random-mode" className="text-xs cursor-pointer">Aleatório</Label>
               </div>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
@@ -302,7 +317,7 @@ export function Quiz() {
         />
 
         <QuizNavigation
-          questions={questions}
+          questions={orderedQuestions}
           currentIndex={state.currentQuestionIndex}
           answers={state.answers}
           confirmedAnswers={state.confirmedAnswers}
